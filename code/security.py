@@ -5,13 +5,8 @@ ussrs = [
 ]
 
 username_mapping = {u.username: u for u in users}
+userid_mapping= {u.id: u for u in users}
 
-userid_mapping = {1:{
-        "id":1,
-        "username": "bob",
-        "password":"asdf"
-}
-     }
 
 def authenticate(username, password):
     user = username_mapping.get(username, None)
