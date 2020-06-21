@@ -1,6 +1,6 @@
 from user import User
 
-ussrs = [
+users = [
     User(1,"bob","asdf")
 ]
 
