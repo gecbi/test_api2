@@ -33,11 +33,11 @@ class Item(Resource):
         return {"message": "item was deleted"}
 
     def put(self,name):
-        paresr = reqparse.RequestParser()
-        paresr.add_argument("price",
+        parser = reqparse.RequestParser()
+        parser.add_argument("price",
             type=float,
             required = True,
-            help = "This field cannot be left blank!"
+            help = "This field cannot be left blank!Something went wrong!"
         )
         data= parser.parse_args()
         item = next(filter(lambda x: x['name'] == name, items), None)
